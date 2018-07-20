@@ -1,2 +1,3 @@
-# security_camera
+# Security Camera
 Raspberry Pi Security Camera
+
