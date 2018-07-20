@@ -14,7 +14,9 @@ Detects motion and sends an alert email to a specified address.  Flagged images 
 
 ## Start Up
 
-python security_camera.py [AWAY_MODE]
+```python security_camera.py [AWAY_MODE]```
 
-AWAY_MODE	1 or 0, 0 turns off motion detection and alerts
+Parameter | Value | Description
+--- | --- | ---
+AWAY_MODE | 1 or 0 | 0 turns off motion detection and alerts.
 
