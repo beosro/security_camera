@@ -11,6 +11,7 @@ Detects motion and sends an alert email to a specified address.  Flagged images 
 - Python 2.7
 - Web server of your choice
 - fswebcam
+- dig
 
 ## Getting Started
 
