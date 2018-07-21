@@ -104,7 +104,7 @@ def clean_up_old_images():
 
 # Main
 if len(sys.argv) < 2:
-	print "Usage: python", sys.argv[0], "[AWAY_MODE]"
+	print "Usage: python " + sys.argv[0] + " [AWAY_MODE]"
 	sys.exit()
 
 clean_up_old_images()
@@ -135,8 +135,8 @@ while True:
 
 		# Keep remote copy of saved images.
 		if tx_to_amazon == "yes":
-			os.system("scp -i " + amazon_pem + " " + last_image_save + " " + amazon_user + "@"+amazon_host+":" + amazon_dir + "/")
-			os.system("scp -i " + amazon_pem + " " + last_image + " " + amazon_user + "@"+amazon_host+":" + amazon_dir + "/")
+			os.system("scp -i " + amazon_pem + " " + last_image_save + " " + amazon_user + "@" + amazon_host + ":" + amazon_dir + "/")
+			os.system("scp -i " + amazon_pem + " " + last_image + " " + amazon_user + "@" + amazon_host + ":" + amazon_dir + "/")
 
 		# Send alert email.
 		temp = last_image_save.split("/")
