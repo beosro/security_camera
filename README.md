@@ -21,9 +21,13 @@ Parameter | Value | Description
 --- | --- | ---
 AWAY_MODE | 1 or 0 | 0 turns off motion detection and alerts.
 
+Point a web browser at the web server running on the security camera box to see a stream of images.
+
 ## Configuration
 
 Copy `params-example.cfg` to `params.cfg`.  Open with a text editor and modify to suit your environment.
+
+Copy `index.html` to the document root of your web server. 
 
 ## About the Author
 
