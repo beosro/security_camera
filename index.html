@@ -1,0 +1,14 @@
+<html>
+
+<img src="camimg/current_image.jpg" id="imageid">
+
+<script>
+	function reloadFrame() {
+		document.getElementById("imageid").src = "camimg/current_image.jpg?" + Math.random() * 100000000000000000000;
+	}
+
+	setInterval(reloadFrame, 5000);
+</script>
+
+</html>
+
