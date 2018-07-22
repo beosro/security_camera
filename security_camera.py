@@ -143,7 +143,7 @@ while True:
 		last_image_save_filename = temp[-1]
 		temp = last_image.split("/")
 		last_image_filename = temp[-1]
-		msg = "Subject: " + location + " Security Camera Alert\n\nActivity Detected.\nhttp://" + external_ip + ":" + port + web_folder_url + "/save/" + last_image_save_filename + "\nhttp://" + external_ip + ":" + port + web_folder_url + "/save/" + last_image_filename + "\n" + str(diff)
+		msg = "Subject: " + location + " Security Camera Alert\n\nActivity Detected.\nhttps://" + external_ip + ":" + port + web_folder_url + "/save/" + last_image_save_filename + "\nhttps://" + external_ip + ":" + port + web_folder_url + "/save/" + last_image_filename + "\n" + str(diff)
 		email_alert(email_to, msg)
 
 	# Remove images older than 24 hours to conserve disk space.

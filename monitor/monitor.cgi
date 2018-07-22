@@ -3,13 +3,13 @@
 import cgi
 import subprocess
 import random
-
+import os
 
 PI1 = 0
 PI1_NAME = "Family Room"
 PI2 = 1
 PI2_NAME = "Kitchen"
-
+host = os.environ.get('SERVER_NAME')
 
 form = cgi.FieldStorage()
 start_all = form.getvalue("start_all", "")
@@ -78,7 +78,7 @@ else:
 	print """<img src="/green_check.png" width="75"><br>""" + PI1_NAME
 print """
 <br>
-<a href="http://192.168.1.170"><img src="/camimg/current_image_pi1.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
+<a href="https://""" + host + """"><img src="/camimg/current_image_pi1.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
 </div>
 """
 
@@ -91,7 +91,7 @@ else:
         print """<img src="/green_check.png" width="75"><br>""" + PI2_NAME
 print """
 	<br>
-	<a href="http://192.168.1.171"><img src="/camimg/current_image.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
+	<a href="https://""" + host + """"><img src="/camimg/current_image.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
 	</div>
 
 	</div>
