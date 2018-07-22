@@ -43,7 +43,13 @@ print """
 <html>
 	<head>
 		<title>Home Monitor Buddy</title>
-		<meta http-equiv="refresh" content="10">
+"""
+                
+# Only auto refresh page if a camera is on.
+if int(status_pi1) > 0 or int(status_pi2) > 0:
+        print """<meta http-equiv="refresh" content="10">"""
+
+print """
 	</head>
 
 	<body style="background-color: #334b70;">
@@ -72,7 +78,7 @@ else:
 	print """<img src="/green_check.png" width="75"><br>""" + PI1_NAME
 print """
 <br>
-<img src="/camimg/current_image_pi1.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;">
+<a href="http://192.168.1.170"><img src="/camimg/current_image_pi1.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
 </div>
 """
 
@@ -85,7 +91,7 @@ else:
         print """<img src="/green_check.png" width="75"><br>""" + PI2_NAME
 print """
 	<br>
-	<img src="/camimg/current_image.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;">
+	<a href="http://192.168.1.171"><img src="/camimg/current_image.jpg?rnd=""" + str(random.randint(1,999999)) + """" style="width: 100%;"></a>
 	</div>
 
 	</div>
